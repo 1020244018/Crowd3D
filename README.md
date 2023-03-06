@@ -23,13 +23,9 @@ We plan to release the training and testing code of Crowd3D in this repository a
 
 ## Pretrained model
 
-You can download the pretrained model.
-
-[Download: pretrained model of Crowd3D]()
-
-## Notice
 
 ## LargeCrowd Dataset
+
 ## TODO
 
 - Code for training and testing of Crowd3D
