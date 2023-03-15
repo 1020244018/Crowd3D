@@ -37,10 +37,10 @@ We plan to release the training and testing code of Crowd3D in this repository a
 If you find this code useful for your research, please use the following BibTeX entry.
 
 ```
-@inproceedings{wen2023crowd3d,
-  title={Crowd3D: Towards Hundreds of People Reconstruction from a Single Image},
-  author={Wen Hao and Huang Jing and Cui Huili and Lin Haozhe and Lai YuKun and Fang Lu and Li Kun},
-  journal={arXiv preprint arXiv:2301.09376},
-  year={2023}
+@inproceedings{Crowd3D,
+  author = {Hao Wen, Jing Huang, Huili Cui, Haozhe Lin, Yu-Kun Lai, LU FANG, Kun Li},
+  title = {Crowd3D: Towards Hundreds of People Reconstruction from a Single Image},
+  booktitle = {CVPR},
+  year={2023},
 }
 ```
