@@ -30,7 +30,7 @@ We construct LargeCrowd for crowd reconstruction in a large scene. LargeCrowd is
 
 [Baidu drive](https://pan.baidu.com/s/1XBJPD41fPysCtl1byP_8HA?pwd=c2lw) | [Data format](assets/docs/largecrowd.md)
 
-
+Note: The annotations of the test set have not yet been released, due to the undetermined verification form (web page verification or code verification).
 
 ## TODO
 
