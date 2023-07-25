@@ -3,7 +3,7 @@
 
 
 
-### [Project Page]() | [Paper]() 
+### [Project Page](http://cic.tju.edu.cn/faculty/likun/projects/Crowd3D) | [Paper](http://cic.tju.edu.cn/faculty/likun/projects/Crowd3D/asserts/main_paper.pdf) 
 
 
 > [Crowd3D: Towards Hundreds of People Reconstruction from a Single Image]()  
@@ -25,11 +25,16 @@ We plan to release the training and testing code of Crowd3D in this repository a
 
 
 ## LargeCrowd Dataset
+We construct LargeCrowd for crowd reconstruction in a large scene. LargeCrowd is a benchmark dataset with over 100K labeled humans (2D bounding boxes, 2D keypoints, 3D ground plane and HVIPs) in 733 gigapixel-images (19200×6480) of 9 different scenes. 
+![](assets/imgs/Dataset.gif)
+
+[Baidu drive](https://pan.baidu.com/s/1XBJPD41fPysCtl1byP_8HA?pwd=c2lw) | [Data format](assets/docs/largecrowd.md)
+
+
 
 ## TODO
 
 - Code for training and testing of Crowd3D
-- LargeCrowd dataset
 
 
 ## Citation
