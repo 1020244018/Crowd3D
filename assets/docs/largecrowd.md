@@ -1,5 +1,5 @@
-***
- The folder *annotations* contains multiple JSON files named with scene names, and each JSON file contains the annotation of a scene with fixed view. For each JSON,
+
+The folder *annotations* contains multiple JSON files named with scene names, and each JSON file contains the annotation of a scene with fixed view. For each JSON,
 
 
     JSON{
