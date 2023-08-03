@@ -1,0 +1,76 @@
+
+
+ARGS:
+ tab: 'V11_all_h36m,agora,muco,largecrowd'
+ dataset: 'muco,h36m,agora,largecrowd' 
+ gpu: '0,1' 
+ distributed_training: False
+ model_version: 1
+ pretrain: 'imagenet'
+ match_preds_to_gts_for_supervision: True
+
+ master_batch_size: -1 # # balance the multi-GPU memory via adjusting the batch size of each GPU.
+ val_batch_size: 16 #
+ batch_size: 30 #58
+ nw: 4
+ nw_eval: 2
+ lr: 0.00005
+ epoch: 70
+
+ fine_tune: True
+ fix_backbone_training_scratch: False
+ eval: False
+ supervise_global_rot: False
+
+ model_return_loss: False
+ collision_aware_centermap: True
+ collision_factor: 0.2
+ homogenize_pose_space: True
+ shuffle_crop_mode: True
+ shuffle_crop_ratio_2d: 0.1
+ shuffle_crop_ratio_3d: 0.4
+
+ merge_smpl_camera_head: False
+ head_block_num: 2
+
+ backbone: 'hrnet'
+ centermap_size: 64
+ centermap_conf_thresh: 0.2
+
+ model_path: checkpoints/hrnet_cm64_V11_foot_h36m,agora,muco,largecrowd_on_gpu0,1_val/hrnet_cm64_V11_foot_h36m,agora,muco,largecrowd_epoch_14.pkl
+ milestones: '50, 65'
+ 
+
+loss_weight:
+ MPJPE: 200.
+ PAMPJPE: 360.
+ P_KP2D: 400.
+ Pose: 80.
+ Shape: 6.
+ Prior: 1.6
+ hvip2d: 500.
+ out_of_bound: 800
+ root_cam: 200
+ tc_offset: 800.
+ ground_normal: 10.
+
+#  MPJPE: 0.
+#  PAMPJPE: 0.
+#  P_KP2D: 0.
+#  Pose: 0.
+#  Shape: 0.
+#  Prior: 0
+#  ankle2d: 0.
+#  delta2d: 0.
+#  trans3d: 0.
+#  side_ground: 0.
+#  root_cam: 0.
+
+ CenterMap: 160.
+
+
+sample_prob:
+ muco: 0.2
+ h36m: 0.3
+ agora: 0.15
+ largecrowd: 0.35

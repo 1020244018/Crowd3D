@@ -1,0 +1,24 @@
+
+ARGS:
+ tab: 'eval_largecrowd'
+ GPUS: 0
+
+ backbone: 'hrnet' #'resnet' #
+ model_precision: 'fp32'
+ val_batch_size: 128
+ nw: 1
+ # model_path: checkpoints/hrnet_cm64_V6_root_cam_on_gpu0,1_val/hrnet_cm64_V6_root_cam_epoch_10.pkl
+ save_visualization_on_img: False
+ smpl_mesh_root_align: True
+ only_for_have_people_crops: False
+
+ test_dataset: 'eval_largecrowd'
+ # inputs: ''
+ # ground_cam_root: ''
+ collect_subdirs: False # whether to collect images from the sub-folder of the input path.
+ # output_dir: ''
+ save_mesh: True
+ save_centermap: True
+ save_dict_results: True
+ mesh_cloth: 'ghostwhite'  #'LightCyan'
+ # scene_type: ''

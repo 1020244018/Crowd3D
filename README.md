@@ -10,9 +10,7 @@
 > Hao Wen, Jing Huang, Huili Cui, Haozhe Lin, Yu-Kun Lai, LU FANG, Kun Li 
 > CVPR 2023
 
-Code is coming soon!
-
-We plan to release the training and testing code of Crowd3D in this repository as soon as possible. Any discussions or questions would be welcome!
+**施工中...**
 
 ## News
 

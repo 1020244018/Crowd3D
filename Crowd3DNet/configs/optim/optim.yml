@@ -1,0 +1,54 @@
+ARGS:
+  backbone: hrnet
+  batch_size: 64
+  centermap_conf_thresh: 0.2
+  centermap_size: 64
+  collision_aware_centermap: true
+  collision_factor: 0.2
+  dataset: test_train_scale
+  distributed_training: false
+  epoch: 160
+  eval: false
+  fine_tune: true
+  finetune_mode: layer1_gc
+  fix_backbone_training_scratch: false
+  gpu: 0,1
+  head_block_num: 2
+  homogenize_pose_space: true
+  lr: 5.0e-05
+  master_batch_size: -1
+  match_preds_to_gts_for_supervision: true
+  merge_smpl_camera_head: false
+  milestones: 50, 65
+  model_path: /mnt/wh/Crowd3D/Crowd3DNet/pretrained/base_69.pkl
+  model_return_loss: false
+  model_version: 1
+  nw: 4
+  nw_eval: 2
+  pretrain: imagenet
+  shuffle_crop_mode: true
+  shuffle_crop_ratio_2d: 0.1
+  shuffle_crop_ratio_3d: 0.4
+  supervise_global_rot: false
+  tab: optim_stadiumEntrance_01_ground
+  test_train: true
+  test_train_anno_path: /mnt/wh/Crowd3D/test/test_mid/stadiumEntrance_01/stadiumEntrance_01_000100/optim_annots_scale.pkl
+  test_train_ground_path: /mnt/wh/Crowd3D/test/test_mid/ground_mid/ground/stadiumEntrance_01
+  test_train_image_gn_path: /data/wh/workspace/playgroundTest/competition/test_mid_results/stadiumEntrance_01/stadiumEntrance_01_000100/gt_ground_images_gn
+  test_train_image_path: /mnt/wh/Crowd3D/test/test_mid/stadiumEntrance_01/stadiumEntrance_01_000100/part_images_scale
+  val_batch_size: 16
+loss_weight:
+  CenterMap: 160.0
+  MPJPE: 0.0
+  PAMPJPE: 0.0
+  P_KP2D: 400.0
+  Pose: 0.0
+  Prior: 1.6
+  Shape: 0.0
+  ground_normal: 10.0
+  hvip2d: 0.0
+  out_of_bound: 800
+  root_cam: 0.0
+  tc_offset: 0.0
+sample_prob:
+  test_train_scale: 1

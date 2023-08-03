@@ -1,0 +1,15 @@
+ARGS:
+  GPUS: 0
+  backbone: hrnet
+  collect_subdirs: false
+  mesh_cloth: ghostwhite
+  model_precision: fp32
+  nw: 1
+  save_centermap: true
+  save_dict_results: true
+  save_mesh: true
+  save_visualization_on_img: false
+  smpl_mesh_root_align: true
+  tab: single_scene_image
+  test_dataset: single_scene_image
+  val_batch_size: 128
