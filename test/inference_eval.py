@@ -40,7 +40,7 @@ run_dict={
     'finetune_flag': True,
     'inference_flag': True,
     'quantative_flag': True,
-    'visual_mesh_flag': False
+    'visual_mesh_flag': False # Need to set the scene_image
 }
 
 if use_pre_optim:
@@ -78,6 +78,7 @@ if finetune_flag and not use_pre_optim:
     time_dict['finetune']=end_time-start_time
 
 epoch_list=[max([optim_epoch-1, 0])] # [59, 79, 99, 119, 139, 159]
+
 ## 2. inference
 inference_flag=run_dict['inference_flag']
 if inference_flag:

@@ -10,12 +10,29 @@
 > Hao Wen, Jing Huang, Huili Cui, Haozhe Lin, Yu-Kun Lai, LU FANG, Kun Li 
 > CVPR 2023
 
-**正在施工中...**
-
 
 ## Install
-
+1. Install [Alphapose](https://github.com/MVIG-SJTU/AlphaPose) and run its demo successfully, like 
 ```
+python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res152_lr1e-3_1x-duc.yaml --checkpoint pretrained_models/fast_421_res152_256x192.pth --indir examples/demo/
+```
+
+2. Install the virtual environment of Crowd3D.
+```
+# create virtual environment
+conda create -n crowd3d python=3.9 -y
+conda activate crowd3d
+
+# install pytorch, we use pytorch=1.8, cuda=11.1
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+# pip other environments by requirement.txt
+pip install -r requirements.txt
+
+# install pytorch3d
+git clone https://github.com/facebookresearch/pytorch3d.git
+cd pytorch3d && pip install -e .
+
 ```
 
 ## Model Data
@@ -47,6 +64,29 @@ conda activate crowd3d
 python single_image/inference.py --scene_image_path /the/abs/path/of/demo/image 
 ```
 
+## Training
+```
+# Need to download the train_data.
+
+cd Crowd3DNet
+
+bash train.sh # the training log save in 'train_log/'
+```
+
+## Test
+```
+# Need to download the largecrowd.
+
+# 1. process image.
+conda activate alphapose
+python test/preprocess.py
+
+# 2. conda activate crowd3d
+python test/inference_eval.py --use_pre_optim # Delete '--use_pre_optim' if you need to reoptimize.
+
+# You will get the result 'predict.json', We will not release the quantitative calculation code for now. If you need to compare, you can send us your 'predict.json'.
+```
+
 ## LargeCrowd Dataset
 We construct LargeCrowd for crowd reconstruction in a large scene. LargeCrowd is a benchmark dataset with over 100K labeled humans (2D bounding boxes, 2D keypoints, 3D ground plane and HVIPs) in 733 gigapixel-images (19200×6480) of 9 different scenes. 
 ![](assets/imgs/Dataset.gif)
@@ -55,14 +95,11 @@ We construct LargeCrowd for crowd reconstruction in a large scene. LargeCrowd is
 
 Note: The annotations of the test set have not yet been released, due to the undetermined verification form (web page verification or code verification).
 
-## TODO
-
-- Code for training and testing of Crowd3D
 
 
 ## Citation
+If you find this code useful for your research, please use the following BibTeX entry. 
 
-If you find this code useful for your research, please use the following BibTeX entry.
 
 ```
 @inproceedings{Crowd3D,
@@ -72,3 +109,6 @@ If you find this code useful for your research, please use the following BibTeX 
   year={2023},
 }
 ```
+
+
+Note: The base codes of Crowd3DNet are largely borrowed from [ROMP](https://github.com/Arthur151/ROMP).

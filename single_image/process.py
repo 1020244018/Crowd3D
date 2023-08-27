@@ -30,7 +30,7 @@ if args.scene_image_path == '':
     print('Please input the scene_image_path')
     exit()
 
-scene_image_path=args.scene_image_paths
+scene_image_path=args.scene_image_path
 save_mid_folder=args.save_mid_folder
 visual_merge_joints=True # Visualize the merge joints
 visual_part=True # Visualization of block results

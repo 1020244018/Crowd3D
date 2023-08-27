@@ -24,8 +24,8 @@ parser.add_argument('--save_mesh_mode', type=str, default='all', help='single, m
 args=parser.parse_args()
 
 run_dict={
-    'finetune_flag': False,
-    'inference_flag': False,
+    'finetune_flag': True,
+    'inference_flag': True,
     'visual_mesh_flag': True
     }
 
